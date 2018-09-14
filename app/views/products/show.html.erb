@@ -7,7 +7,6 @@
   <article class="product-detail">
 
     <div class="row">
-
       <div class="col-sm-4">
         <%= image_tag @product.image.url, class: 'main-img' %>
       </div>
@@ -24,6 +23,13 @@
           <dd><%= @product.price %></dd>
         </dl>
       </div>
+    </div>
+
+    <div class="row">
+      <h3>Reviews</h3>
+      <% @product.reviews.each do |review| %>
+      <p><strong>User <%= review.user_id %></strong>: <%= review.description %>. Rating: <%= review.rating %></span></p>
+      <% end %>
     </div>
 
   </article>
