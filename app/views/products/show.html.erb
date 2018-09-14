@@ -32,6 +32,12 @@
       <% end %>
     </div>
 
+    <%= form_for ([@product, Review.new]) do |f| %>
+      <%= f.text_area :description %><br>
+      <%= f.select :rating, [1,2,3,4,5]%>
+      <%= f.submit %>
+    <% end %>
+
   </article>
 
 </section>
