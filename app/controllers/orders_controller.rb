@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-
   def show
     @order = Order.find(params[:id])
     @line_items = LineItem.includes(:product).where(order_id: params[:id])
