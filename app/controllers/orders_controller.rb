@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
     redirect_to cart_path, flash: { error: e.message }
   end
 
-  private
+  # privateUserMailer.email_receipt
 
   def empty_cart!
     # empty hash means no products in cart :)
@@ -55,6 +55,7 @@ class OrdersController < ApplicationController
       )
     end
     order.save!
+    UserMailer.email_receipt(order).deliver_now
     order
   end
 
