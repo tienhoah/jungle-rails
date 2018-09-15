@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_filter :authorize
+
   def create
     @review = Review.new(review_params)
     @review.user = current_user
@@ -9,6 +11,12 @@ class ReviewsController < ApplicationController
      else
       redirect_to "/products/#{params[:product_id]}"
     end
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to "/products/#{params[:product_id]}"
   end
 
   private

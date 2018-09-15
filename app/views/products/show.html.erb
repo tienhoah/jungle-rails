@@ -27,15 +27,26 @@
 
     <div class="row">
       <h3>Reviews</h3>
-      <% @product.reviews.each do |review| %>
-      <p><strong>User <%= review.user_id %></strong>: <%= review.description %>. Rating: <%= review.rating %></span></p>
+      <% @reviews.each do |review| %>
+      <p><strong>User <%= review.user_id %></strong>: <%= review.description %>. Rating: <%= review.rating %></p>
+
+        <% if review.user_id == current_user.id %>
+          <p>
+            <%=link_to 'Delete review', product_review_path(@product, review.id),
+                        method: :delete %>
+                        </p>
+        <% end %>
       <% end %>
     </div>
 
-    <%= form_for ([@product, Review.new]) do |f| %>
-      <%= f.text_area :description %><br>
-      <%= f.select :rating, [1,2,3,4,5]%>
-      <%= f.submit %>
+    <% if current_user %>
+      <%= form_for ([@product, Review.new]) do |f| %>
+        <%= f.text_area :description %><br>
+        <%= f.select :rating, [1,2,3,4,5]%>
+        <%= f.submit %>
+      <% end %>
+    <% else %>
+      <p>Can't review</p>
     <% end %>
 
   </article>
