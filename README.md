@@ -4,10 +4,11 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Screenshots
 
-!["Screenshot of Jungle Products"]
-!["Screenshot of Jungle Shopping Cart"]
-!["Screenshot of Jungle Checkout"]
-!["Screenshot of Jungle Orders"]
+!["Screenshot of Jungle Products"](https://github.com/tienhoah/jungle-rails/blob/master/docs/products.png)
+!["Screenshot of Jungle Product Detail"](https://github.com/tienhoah/jungle-rails/blob/master/docs/product_detail.png)
+!["Screenshot of Jungle Shopping Cart"](https://github.com/tienhoah/jungle-rails/blob/master/docs/shopping_cart.png)
+!["Screenshot of Jungle Checkout"](https://github.com/tienhoah/jungle-rails/blob/master/docs/checkout.png)
+!["Screenshot of Jungle Orders"](https://github.com/tienhoah/jungle-rails/blob/master/docs/orders.png)
 
 ## Setup
 

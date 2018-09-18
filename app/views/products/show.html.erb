@@ -28,13 +28,14 @@
     <div class="row">
       <h3>Reviews</h3>
       <% @reviews.each do |review| %>
-      <p><strong>User <%= review.user_id %></strong>: <%= review.description %>. Rating: <%= review.rating %></p>
-
-        <% if review.user_id == current_user.id %>
-          <p>
-            <%=link_to 'Delete review', product_review_path(@product, review.id),
-                        method: :delete %>
-                        </p>
+      <p> <strong>User <%= review.user_id %></strong>: <%= review.description %>. Rating: <%= review.rating %></p>
+        <% if current_user %>
+          <% if review.user_id == current_user.id %>
+            <p>
+              <%=link_to 'Delete review', product_review_path(@product, review.id),
+                          method: :delete %>
+                          </p>
+          <% end %>
         <% end %>
       <% end %>
     </div>
