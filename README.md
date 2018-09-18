@@ -2,6 +2,12 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Screenshots
+
+!["Screenshot of Jungle Products"]
+!["Screenshot of Jungle Shopping Cart"]
+!["Screenshot of Jungle Checkout"]
+!["Screenshot of Jungle Orders"]
 
 ## Setup
 
@@ -26,3 +32,4 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
